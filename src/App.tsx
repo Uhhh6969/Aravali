@@ -17,9 +17,9 @@ import LoginModal from './components/auth/LoginModal';
 function App() {
   return (
     <ThemeProvider>
-      <AuthProvider>
-        <StudentProvider>
-          <NotificationProvider>
+      <NotificationProvider>
+        <AuthProvider>
+          <StudentProvider>
             <Router>
               <div className="min-h-screen transition-all duration-300">
                 <Layout>
@@ -36,9 +36,9 @@ function App() {
                 <LoginModal />
               </div>
             </Router>
-          </NotificationProvider>
-        </StudentProvider>
-      </AuthProvider>
+          </StudentProvider>
+        </AuthProvider>
+      </NotificationProvider>
     </ThemeProvider>
   );
 }
