@@ -40,6 +40,7 @@ const Home: React.FC = () => {
             Welcome to
           </h1>
           <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-red-600 to-red-800 dark:from-red-400 dark:to-red-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-400 dark:to-blue-300 bg-clip-text text-transparent">
             Shiwalik House
           </h2>
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-12 max-w-2xl leading-relaxed">
@@ -49,14 +50,14 @@ const Home: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               to="/students"
-              className="group bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              className="group bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl min-h-[44px] flex items-center justify-center"
             >
               Explore Students
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
             </Link>
             <Link
               to="/about"
-              className="bg-white/80 hover:bg-white dark:bg-red-950/50 dark:hover:bg-red-950/70 backdrop-blur-sm text-gray-900 dark:text-white px-8 py-4 rounded-2xl font-semibold text-lg border border-gray-300 dark:border-red-700/50 hover:border-gray-400 dark:hover:border-red-600/70 transition-all duration-300 transform hover:scale-105"
+              className="bg-white/80 hover:bg-white dark:bg-blue-950/50 dark:hover:bg-blue-950/70 backdrop-blur-sm text-gray-900 dark:text-white px-8 py-4 rounded-2xl font-semibold text-lg border border-gray-300 dark:border-blue-700/50 hover:border-gray-400 dark:hover:border-blue-600/70 transition-all duration-300 transform hover:scale-105 min-h-[44px] flex items-center justify-center"
             >
               About House
             </Link>
@@ -65,7 +66,7 @@ const Home: React.FC = () => {
 
         <button
           onClick={scrollToContent}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 p-4 rounded-full bg-white/80 hover:bg-white dark:bg-red-950/50 dark:hover:bg-red-950/70 backdrop-blur-sm border border-gray-300 dark:border-red-700/50 hover:border-gray-400 dark:hover:border-red-600/70 transition-all duration-300 animate-bounce"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 p-4 rounded-full bg-white/80 hover:bg-white dark:bg-blue-950/50 dark:hover:bg-blue-950/70 backdrop-blur-sm border border-gray-300 dark:border-blue-700/50 hover:border-gray-400 dark:hover:border-blue-600/70 transition-all duration-300 animate-bounce min-h-[44px] min-w-[44px] flex items-center justify-center"
         >
           <ChevronDown className="h-6 w-6 text-gray-900 dark:text-white" />
         </button>
@@ -87,9 +88,9 @@ const Home: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="group bg-white dark:bg-red-950/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-red-800/30 hover:border-gray-300 dark:hover:border-red-700/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                  className="group bg-white dark:bg-blue-950/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-blue-800/30 hover:border-gray-300 dark:hover:border-blue-700/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
                 >
-                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${index === 0 ? 'from-red-500 to-red-600' : index === 1 ? 'from-red-600 to-red-700' : index === 2 ? 'from-red-700 to-red-800' : 'from-red-800 to-red-900'} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${index === 0 ? 'from-blue-500 to-blue-600' : index === 1 ? 'from-blue-600 to-blue-700' : index === 2 ? 'from-blue-700 to-blue-800' : 'from-blue-800 to-blue-900'} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
                   <h4 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{stat.value}</h4>
@@ -114,29 +115,29 @@ const Home: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link
               to="/students"
-              className="group bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/50 dark:to-red-800/50 backdrop-blur-sm rounded-2xl p-8 border border-red-200 dark:border-red-700/30 hover:border-red-300 dark:hover:border-red-600/50 transition-all duration-300 transform hover:scale-105"
+              className="group bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/50 dark:to-blue-800/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-200 dark:border-blue-700/30 hover:border-blue-300 dark:hover:border-blue-600/50 transition-all duration-300 transform hover:scale-105"
             >
-              <Users className="h-12 w-12 text-red-600 dark:text-red-400 mb-6 group-hover:scale-110 transition-transform" />
+              <Users className="h-12 w-12 text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform" />
               <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Student Management</h4>
               <p className="text-gray-600 dark:text-gray-300">Complete student profiles with academic records, family details, and achievements.</p>
             </Link>
 
             <Link
-              to="/academic"
-              className="group bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/40 dark:to-red-800/40 backdrop-blur-sm rounded-2xl p-8 border border-red-200 dark:border-red-700/30 hover:border-red-300 dark:hover:border-red-600/50 transition-all duration-300 transform hover:scale-105"
+              to="/movement"
+              className="group bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/40 dark:to-blue-800/40 backdrop-blur-sm rounded-2xl p-8 border border-blue-200 dark:border-blue-700/30 hover:border-blue-300 dark:hover:border-blue-600/50 transition-all duration-300 transform hover:scale-105"
             >
-              <Award className="h-12 w-12 text-red-600 dark:text-red-400 mb-6 group-hover:scale-110 transition-transform" />
-              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Academic Performance</h4>
-              <p className="text-gray-600 dark:text-gray-300">Track grades, performance trends, and academic achievements across all classes.</p>
+              <TrendingUp className="h-12 w-12 text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform" />
+              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Movement Register</h4>
+              <p className="text-gray-600 dark:text-gray-300">Digital leave request system with approval workflow and notifications.</p>
             </Link>
 
             <Link
-              to="/movement"
-              className="group bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/50 dark:to-pink-800/50 backdrop-blur-sm rounded-2xl p-8 border border-pink-200 dark:border-pink-500/30 hover:border-pink-300 dark:hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105"
+              to="/about"
+              className="group bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-200 dark:border-blue-700/30 hover:border-blue-300 dark:hover:border-blue-600/50 transition-all duration-300 transform hover:scale-105"
             >
-              <TrendingUp className="h-12 w-12 text-pink-600 dark:text-pink-400 mb-6 group-hover:scale-110 transition-transform" />
-              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Movement Register</h4>
-              <p className="text-gray-600 dark:text-gray-300">Digital leave request system with approval workflow and notifications.</p>
+              <BookOpen className="h-12 w-12 text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform" />
+              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">About House</h4>
+              <p className="text-gray-600 dark:text-gray-300">Learn about our house values, staff, facilities, and achievements.</p>
             </Link>
           </div>
         </div>

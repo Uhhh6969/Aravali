@@ -21,7 +21,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Students', href: '/students', icon: Users },
-    { name: 'Academic', href: '/academic', icon: Award },
     { name: 'Movement', href: '/movement', icon: TrendingUp },
     { name: 'About House', href: '/about', icon: BookOpen },
   ];
@@ -32,22 +31,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-red-950 dark:via-red-900 dark:to-black transition-all duration-300">
+    <div className="min-h-screen bg-white dark:bg-gradient-to-br dark:from-blue-950 dark:via-blue-900 dark:to-black transition-all duration-300">
       {/* Header */}
-      <header className="bg-white/95 dark:bg-red-950/95 backdrop-blur-sm border-b border-gray-200 dark:border-red-800/50 sticky top-0 z-50">
+      <header className="bg-white/95 dark:bg-blue-950/95 backdrop-blur-sm border-b border-gray-200 dark:border-blue-800/50 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo and Mobile Menu */}
             <div className="flex items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-red-800/50 transition-colors"
+                className="md:hidden p-3 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-blue-800/50 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
               
               <Link to="/" className="flex items-center ml-2 md:ml-0">
-                <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-red-800 rounded-xl flex items-center justify-center mr-3">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl flex items-center justify-center mr-3">
                   <span className="text-white font-bold text-lg">S</span>
                 </div>
                 <div>
@@ -65,10 +64,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`flex items-center px-4 py-2 rounded-xl font-medium transition-all duration-200 ${
+                    className={`flex items-center px-4 py-2 rounded-xl font-medium transition-all duration-200 min-h-[44px] ${
                       isActive(item.href)
-                        ? 'bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg'
-                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-red-800/50 hover:text-gray-900 dark:hover:text-white'
+                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg'
+                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-blue-800/50 hover:text-gray-900 dark:hover:text-white'
                     }`}
                   >
                     <IconComponent className="h-4 w-4 mr-2" />
@@ -84,10 +83,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`flex items-center px-4 py-2 rounded-xl font-medium transition-all duration-200 ${
+                    className={`flex items-center px-4 py-2 rounded-xl font-medium transition-all duration-200 min-h-[44px] ${
                       isActive(item.href)
-                        ? 'bg-gradient-to-r from-orange-600 to-red-700 text-white shadow-lg'
-                        : 'text-orange-600 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-800/50 hover:text-orange-700 dark:hover:text-orange-300'
+                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg'
+                        : 'text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-800/50 hover:text-blue-700 dark:hover:text-blue-300'
                     }`}
                   >
                     <IconComponent className="h-4 w-4 mr-2" />
@@ -101,7 +100,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center space-x-3">
               {/* Editor Mode Indicator */}
               {isAuthenticated && isEditorMode && (
-                <div className="hidden sm:flex items-center px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-semibold rounded-full">
+                <div className="hidden sm:flex items-center px-3 py-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-xs font-semibold rounded-full">
                   <span className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></span>
                   Editor Mode
                 </div>
@@ -110,17 +109,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* Theme Toggle */}
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-xl bg-gray-100 dark:bg-red-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-red-700/50 transition-all duration-200"
+                className="p-2 rounded-xl bg-gray-100 dark:bg-blue-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-blue-700/50 transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center"
               >
                 {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </button>
 
               {/* Notifications */}
               <NotificationDropdown>
-                <button className="relative p-2 rounded-xl bg-gray-100 dark:bg-red-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-red-700/50 transition-all duration-200">
+                <button className="relative p-2 rounded-xl bg-gray-100 dark:bg-blue-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-blue-700/50 transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center">
                   <Bell className="h-5 w-5" />
                   {pendingCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold">
+                    <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold">
                       {pendingCount}
                     </span>
                   )}
@@ -129,7 +128,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               {/* Account */}
               <AccountDropdown>
-                <button className="p-2 rounded-xl bg-gray-100 dark:bg-red-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-red-700/50 transition-all duration-200">
+                <button className="p-2 rounded-xl bg-gray-100 dark:bg-blue-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-blue-700/50 transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center">
                   <User className="h-5 w-5" />
                 </button>
               </AccountDropdown>
@@ -139,7 +138,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-red-950 border-t border-gray-200 dark:border-red-800/50">
+          <div className="md:hidden bg-white dark:bg-blue-950 border-t border-gray-200 dark:border-blue-800/50">
             <div className="px-4 py-2 space-y-1">
               {navigation.map((item) => {
                 const IconComponent = item.icon;
@@ -148,10 +147,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     key={item.name}
                     to={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-200 ${
+                    className={`flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-200 min-h-[44px] text-base ${
                       isActive(item.href)
-                        ? 'bg-gradient-to-r from-red-600 to-red-700 text-white'
-                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-red-800/50'
+                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white'
+                        : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-blue-800/50'
                     }`}
                   >
                     <IconComponent className="h-5 w-5 mr-3" />
@@ -168,10 +167,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     key={item.name}
                     to={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-200 ${
+                    className={`flex items-center px-4 py-3 rounded-xl font-medium transition-all duration-200 min-h-[44px] text-base ${
                       isActive(item.href)
-                        ? 'bg-gradient-to-r from-orange-600 to-red-700 text-white'
-                        : 'text-orange-600 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-800/50'
+                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white'
+                        : 'text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-800/50'
                     }`}
                   >
                     <IconComponent className="h-5 w-5 mr-3" />

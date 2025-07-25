@@ -8,7 +8,6 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import StudentDetails from './pages/StudentDetails';
 import StudentProfile from './pages/StudentProfile';
-import AcademicPerformance from './pages/AcademicPerformance';
 import MovementRegister from './pages/MovementRegister';
 import AboutHouse from './pages/AboutHouse';
 import AdminBlock from './pages/AdminBlock';
@@ -27,7 +26,6 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/students" element={<StudentDetails />} />
                     <Route path="/student/:id" element={<StudentProfile />} />
-                    <Route path="/academic" element={<AcademicPerformance />} />
                     <Route path="/movement" element={<MovementRegister />} />
                     <Route path="/about" element={<AboutHouse />} />
                     <Route path="/admin-block" element={<AdminBlock />} />

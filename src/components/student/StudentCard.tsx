@@ -55,7 +55,7 @@ const StudentCard: React.FC<StudentCardProps> = ({ student }) => {
 
           {/* House Badge */}
           <div className="mt-3 flex items-center justify-between">
-            <span className="inline-flex items-center px-2 py-1 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs font-semibold rounded-full">
+            <span className="inline-flex items-center px-2 py-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-xs font-semibold rounded-full">
               {student.house}
             </span>
             
@@ -79,7 +79,7 @@ const StudentCard: React.FC<StudentCardProps> = ({ student }) => {
             <div className="mt-3 pt-3 border-t border-gray-200 dark:border-red-800/30">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-gray-600 dark:text-gray-400">Latest Performance</span>
-                <span className="font-semibold text-red-600 dark:text-red-400">
+                <span className="font-semibold text-blue-600 dark:text-blue-400">
                   {student.academicRecords[0].percentage}% ({student.academicRecords[0].grade})
                 </span>
               </div>
