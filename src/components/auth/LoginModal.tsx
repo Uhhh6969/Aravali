@@ -98,7 +98,7 @@ const LoginModal: React.FC = () => {
               </div>
               <div>
                 <h2 className="text-xl font-bold">Admin Login</h2>
-                <p className="text-red-100 text-sm">Shiwalik House Portal</p>
+                <p className="text-red-100 text-sm">Aravalli House Portal</p>
               </div>
             </div>
             <button
@@ -198,13 +198,12 @@ const LoginModal: React.FC = () => {
             </button>
           </form>
 
-          {/* Admin Credentials Info */}
+          {/* Setup Instructions */}
           <div className="mt-6 p-4 bg-gray-50 dark:bg-blue-900/20 rounded-xl border border-gray-200 dark:border-blue-700/30">
-            <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Admin Credentials:</h4>
-            <div className="space-y-1 text-xs text-gray-600 dark:text-gray-400">
-              <div>Username: <code className="bg-gray-200 dark:bg-blue-800/50 px-1 rounded">roti</code> | Password: <code className="bg-gray-200 dark:bg-blue-800/50 px-1 rounded">curry</code></div>
-              <div>Username: <code className="bg-gray-200 dark:bg-blue-800/50 px-1 rounded">abhi</code> | Password: <code className="bg-gray-200 dark:bg-blue-800/50 px-1 rounded">gobi</code></div>
-            </div>
+            <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">First Time Setup:</h4>
+            <p className="text-xs text-gray-600 dark:text-gray-400">
+              No admin accounts exist. Please contact the system administrator to create your first admin account.
+            </p>
           </div>
         </div>
       </div>

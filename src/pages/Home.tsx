@@ -88,12 +88,12 @@ const Home: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-blue-600 dark:from-white dark:to-blue-200 bg-clip-text text-transparent">
-            Welcome to Shiwalik House
+            Welcome to Aravalli House
           </h1>
           
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
             {isAuthenticated 
-              ? `Welcome back, ${user?.username}! Manage your house with our comprehensive digital platform.`
+              ? `Welcome back, ${user?.username}! Manage your Aravalli House with our comprehensive digital platform.`
               : 'Your comprehensive digital platform for student management, academic tracking, and house administration.'
             }
           </p>
@@ -244,7 +244,7 @@ const Home: React.FC = () => {
             Excellence in Education, Character in Leadership
           </h3>
           <p className="text-gray-600 dark:text-gray-400">
-            Shiwalik House - Building tomorrow's leaders today
+            Aravalli House - Building tomorrow's leaders today
           </p>
         </div>
       </div>

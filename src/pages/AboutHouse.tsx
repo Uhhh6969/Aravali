@@ -4,13 +4,14 @@ import { Mail, Phone, Award, Users, Calendar, MapPin, Star, BookOpen } from 'luc
 const AboutHouse: React.FC = () => {
   const houseMaster = {
     name: 'Dr. Rajesh Kumar',
-    designation: 'House Master, Shiwalik House',
+    designation: 'House Master, Aravalli House',
     qualifications: ['M.A. English Literature', 'Ph.D. Educational Psychology', 'B.Ed.'],
     experience: '15 years',
     contact: '+91 9876543100',
     email: 'rajesh.kumar@school.edu.in',
     photo: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
     message: 'Welcome to Shiwalik House, where we nurture young minds to become responsible global citizens. Our focus is on holistic development that encompasses academic excellence, character building, and leadership skills.'
+    message: 'Welcome to Aravalli House, where we nurture young minds to become responsible global citizens. Our focus is on holistic development that encompasses academic excellence, character building, and leadership skills.'
   };
 
   const staff = [
@@ -86,7 +87,7 @@ const AboutHouse: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-purple-600 dark:from-white dark:to-purple-200 bg-clip-text text-transparent">
-            About Shiwalik House
+            About Aravalli House
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             A home away from home where excellence meets character

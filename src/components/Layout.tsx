@@ -47,10 +47,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               
               <Link to="/" className="flex items-center ml-2 md:ml-0">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-lg">S</span>
+                  <span className="text-white font-bold text-lg">A</span>
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold text-gray-900 dark:text-white">Shiwalik House</h1>
+                  <h1 className="text-xl font-bold text-gray-900 dark:text-white">Aravalli House</h1>
                   <p className="text-xs text-gray-500 dark:text-gray-400">Management Portal</p>
                 </div>
               </Link>

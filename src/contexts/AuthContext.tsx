@@ -30,17 +30,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [loginAttempts, setLoginAttempts] = useState(0);
   const [lockoutTime, setLockoutTime] = useState<Date | null>(null);
   
-  // In-memory admin users storage (will reset on page refresh)
-  const [adminUsers, setAdminUsers] = useState<User[]>([
-    { id: '1', username: 'roti', isAdmin: true },
-    { id: '2', username: 'abhi', isAdmin: true }
-  ]);
+  // In-memory admin users storage (empty by default)
+  const [adminUsers, setAdminUsers] = useState<User[]>([]);
   
-  // In-memory password storage (in real app, this would be hashed and stored securely)
-  const [adminPasswords] = useState<Record<string, string>>({
-    'roti': 'curry',
-    'abhi': 'gobi'
-  });
+  // In-memory password storage
+  const [adminPasswords, setAdminPasswords] = useState<Record<string, string>>({});
 
   const login = (username: string, password: string): boolean => {
     // Check if locked out
@@ -100,8 +94,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
 
     setAdminUsers(prev => [...prev, newUser]);
-    // Note: In a real app, passwords would be hashed
-    adminPasswords[username] = password;
+    setAdminPasswords(prev => ({ ...prev, [username]: password }));
     addNotification(`Admin user '${username}' created successfully`);
     return true;
   };
@@ -110,7 +103,11 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const userToRemove = adminUsers.find(u => u.id === userId);
     if (userToRemove) {
       setAdminUsers(prev => prev.filter(u => u.id !== userId));
-      delete adminPasswords[userToRemove.username];
+      setAdminPasswords(prev => {
+        const updated = { ...prev };
+        delete updated[userToRemove.username];
+        return updated;
+      });
       addNotification(`Admin user '${userToRemove.username}' removed successfully`);
     }
   };

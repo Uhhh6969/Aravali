@@ -19,7 +19,7 @@ const AddStudentModal: React.FC<AddStudentModalProps> = ({ isOpen, onClose }) =>
     rollNumber: '',
     dateOfBirth: '',
     bloodGroup: 'A+',
-    house: 'Shiwalik',
+    house: 'Aravalli',
     address: '',
     identificationMark: '',
     hobbies: '',
